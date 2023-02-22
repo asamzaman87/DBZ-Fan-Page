@@ -1,0 +1,150 @@
+*{
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+}
+/*https://www.geeksforgeeks.org/what-is-the-use-of-asterisk-selector-in-css/#:~:
+text=The%20asterisk%20(*)%20is%20known,the%20elements%20on%20the%20page.
+https://www.w3schools.com/cssref/pr_font_font-family.asp
+https://www.w3schools.com/tags/tag_div.ASP
+*/
+.main{
+	width:100%;/*100% of the parent's width while 100vh is 100% of the view port*/
+	height:100vh;
+	position:relative;
+	overflow:hidden;
+	background:linear-gradient(to right,red,red) ;
+}
+
+nav{
+	width:80%;
+	position:sticky;
+	margin:20px auto;
+	z-index:1;
+	display:flex;
+	align-items:center;
+}
+
+.logo img{
+	width: 250px;
+	height: 80px;
+}
+
+.nav-links{
+	flex:1; /*by adding flex can we align it, without it we cant*/
+	text-align:right;
+}
+
+.nav-links ul li{
+	list-style:none;
+	display:inline-block;
+	margin:0 20px;
+}
+
+.nav-links ul li a{
+	color:black;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.information{
+	width:1000px;
+	height:1000px;
+	position:absolute;
+	top:50%;/*different effects for diff positions*/
+	left:-10%;
+	transform: translateY(-50%);/*vertically centered*/
+}
+
+#circle{
+	width:1000px;
+	height:1000px;
+	position:absolute;
+	top:0;
+	left:0;
+	border-radius: 50%;
+	transform: rotate(0deg);
+	transition: 1s; /*we get rid of the circle but its still there...*/
+}
+
+.feature img{
+	width: 70px;
+}
+
+.feature{
+	position:absolute;
+	display:flex; /*brings up the elements on the same line*/
+	color:black;
+}
+
+.feature div{
+	margin-left:30px;
+}
+
+.feature div p{
+	margin-top: 8px;
+}
+
+.one{
+	top:450px;
+	right:50px;
+}
+
+.two{
+	top:150px;
+	left:350px;
+	transform: rotate(-90deg);
+}
+
+.three{
+	bottom:450px;
+	left:50px;
+	transform: rotate(-180deg);
+}
+
+.goku{
+	width:300px;
+	position:absolute;
+	top:50%;/*why 50% of the viewport*/
+	left:35%;
+	transform: translateY(-50%);/*vertically centered*/
+	z-index:1;
+}
+
+.controls{
+	position:absolute;
+	right:10%;/*why 50% of the viewport*/
+	top:50%;
+	transform: translateY(-50%);/*vertically centered*/
+	text-align: center;
+}
+
+.controls h3{
+	margin: 15ppx 0;
+	color:black;
+	font-size: 20px;
+}
+
+#upBtn{
+	width:20px;
+	cursor:pointer;
+}
+
+#downBtn{
+	width:20px;
+	cursor:pointer;
+	transform: rotate(180deg)
+}
+
+.overlay{
+	width:0;
+	height:0;
+	border-top:500px solid black;
+	border-right:500px solid red;
+	border-bottom:500px solid black;
+	border-left:500px solid black;
+	position:absolute;
+	left:0;
+	bottom:0;
+
+}
